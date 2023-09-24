@@ -761,7 +761,7 @@ NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
 #else
     if (!parameters[kDelay]) {
 #endif
-        parameters[kDelay] = @"1";
+        parameters[kDelay] = @"0"; // default not raise, only focus.
     }
     if ([parameters[kPollMillis] intValue] < 20) { parameters[kPollMillis] = @"50"; }
     if ([parameters[kMouseDelta] floatValue] < 0) { parameters[kMouseDelta] = @"0"; }
